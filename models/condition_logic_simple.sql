@@ -18,7 +18,7 @@ select
 ,   c.condition_category
 ,   c.condition
 from patients a
-inner join {{ ref('stg_diagnosis') }}  b
+inner join {{ ref('stg_condition') }}  b
     on a.encounter_id = b.encounter_id
 inner join {{ ref('chronic_condition') }}  c
     on b.diagnosis_code = c.code

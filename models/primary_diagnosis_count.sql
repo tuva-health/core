@@ -18,7 +18,7 @@ with primary_diagnosis_count_greater_than_zero as (
 select
     encounter_id,
     count(*) as primary_dx_count
-from {{ ref('stg_diagnosis') }}
+from {{ ref('stg_condition') }}
 where diagnosis_rank = 1
 group by encounter_id
 ),
@@ -28,7 +28,7 @@ group by encounter_id
 -- stg_diagnosis model
 all_encounter_ids as (
 select distinct encounter_id
-from {{ ref('stg_diagnosis') }}
+from {{ ref('stg_condition') }}
 ),
 
 

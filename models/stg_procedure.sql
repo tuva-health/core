@@ -10,6 +10,6 @@
 
 select
     cast(encounter_id as varchar) as encounter_id,
-    cast(procedure_code as varchar) as procedure_code
+    cast(code as varchar) as procedure_code
 
 from {{ var('src_procedure') }}

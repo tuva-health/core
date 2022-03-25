@@ -2,7 +2,7 @@
 version: 2
 
 models:
-  - name: stg_diagnosis
+  - name: stg_condition
     description: "This is a staging table for the input layer. Each row represents a unique diagnosis a patient got in an encouter. All diagnoses available in the input data set are present here."
     columns:
       - name: encounter_id

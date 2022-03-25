@@ -10,7 +10,7 @@ select
 from {{ ref('stg_patient') }} a
 left join {{ ref('stg_encounter') }}  b
     on a.patient_id = b.patient_id    
-left join {{ ref('stg_diagnosis') }} c
+left join {{ ref('stg_condition') }} c
     on b.encounter_id = c.encounter_id
 )
 

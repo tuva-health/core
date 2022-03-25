@@ -32,7 +32,7 @@ select
     end as valid_icd_10_cm_flag,
     cc.ccs_diagnosis_category
 from
-    {{ ref('stg_diagnosis') }} aa
+    {{ ref('stg_condition') }} aa
     left join {{ ref('icd_10_cm') }} bb
     on aa.diagnosis_code = bb.icd_10_cm
     left join {{ ref('ccs_icd_10_cm') }} cc

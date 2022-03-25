@@ -33,7 +33,7 @@ sources:
           - name: ms_drg
             description: The MS-DRG code for acute inpatient visits.                  
 
-      - name: stg_diagnosis
+      - name: stg_condition
         description: Staging table to prepare data to feed core.diagnoses.
         columns:
           - name: encounter_id
