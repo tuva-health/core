@@ -6,8 +6,8 @@ profile: jefferson                # configuration required (your profile to conn
 
 vars:
     source_name: jefferson      # configuration required (name of your source dataset e.g. cms_claims)
-    source_database: jefferson   # configuration required (name of the database where your data is stored)
-    source_schema: staging   # configuration required (name of the schema where you created staging tables)
+    source_database: dev   # configuration required (name of the database where your data is stored)
+    source_schema: jefferson   # configuration required (name of the schema where you created staging tables)
 
     src_patient: "{{ source(var('source_name'),'stg_patient') }}"
     src_encounter: "{{ source(var('source_name'),'stg_encounter') }}"
